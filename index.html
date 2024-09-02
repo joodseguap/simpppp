@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impress Her</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+            color: #333;
+            cursor: pointer;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .option-button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .option-button:hover {
+            background-color: #45a049;
+        }
+        .no-button {
+            background-color: #f44336;
+        }
+        .no-button:hover {
+            background-color: #e53935;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 id="girlName" onclick="showOptions()">Click to see options</h1>
+    <div class="options" id="options" style="display: none;">
+        <button class="option-button" onclick="showYesMessage()">Yes</button>
+        <button class="option-button no-button" onclick="showNoMessage()">No</button>
+    </div>
+</div>
+
+<script>
+    function showOptions() {
+        document.getElementById('girlName').textContent = "Go out with Tomer?";
+        document.getElementById('options').style.display = "block";
+    }
+
+    function showYesMessage() {
+        alert("Who doesnt!");
+    }
+
+    function showNoMessage() {
+        alert("youre autistic");
+    }
+</script>
+
+</body>
+</html>
